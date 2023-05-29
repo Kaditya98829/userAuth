@@ -12,7 +12,7 @@ router.get('/user/logout', userLogout);
 router.get('/temp', async(req, res) => {
     return res.status(200).json({
         success: true,
-        data: 'Temp Found'
+        data: 'Temp Found with CI and CD'
     })
 })
 router.put('/update/user/:id', update);
