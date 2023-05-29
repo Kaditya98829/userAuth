@@ -9,7 +9,12 @@ router.get('/users', isUserAuth, getAllSUsers);
 router.post('/forgot/password', forgotPassword);
 router.put('/reset/password/:token', resetPassword);
 router.get('/user/logout', userLogout);
-
+router.get('/temp', async(req, res) => {
+    return res.status(200).json({
+        success: true,
+        data: 'Temp Found'
+    })
+})
 router.put('/update/user/:id', update);
 router.delete('/delete/user/:id', deleteUserData);
 
