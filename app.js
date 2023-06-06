@@ -2,6 +2,7 @@
 const express = require('express');
 const app = require('express')();
 const dotenv = require('dotenv');
+const cors  = require('cors');
 const cookieParser = require('cookie-parser')
 
 dotenv.config({path: './config.env'});
@@ -12,7 +13,8 @@ const router = require('./router');
 app.use(express.json());
 app.use(cookieParser());
 app.use(require('morgan')('combined')); 
-app.use('/', router);
+app.use(cors());
+app.use('/', cors(), router);
 //app variables
 const PORT = 4000;
 connectToDataBase();
