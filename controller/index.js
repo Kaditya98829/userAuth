@@ -31,7 +31,7 @@ const loginUser = async(req, res) => {
         })
     }
 
-   await sendToken(user, 200, res);
+   return await sendToken(user, 200, res);
 
     } catch (error) {
      res.status(400).json({
