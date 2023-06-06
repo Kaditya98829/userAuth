@@ -7,7 +7,7 @@ router.post('/register', registerUser);
 router.post('/login', loginUser)
 router.get('/users', isUserAuth, getAllSUsers);
 router.post('/forgot/password', forgotPassword);
-router.put('/reset/password/:token', cors(), resetPassword);
+router.put('/reset/password/:token', resetPassword);
 router.get('/user/logout', userLogout);
 router.get('/temp', async(req, res) => {
     return res.status(200).json({

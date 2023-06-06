@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(require('morgan')('combined')); 
 app.use(cors());
-app.use('/', cors(), router);
+app.use('/', router);
 //app variables
 const PORT = 4000;
 connectToDataBase();
